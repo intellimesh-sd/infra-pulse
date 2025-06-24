@@ -1,7 +1,7 @@
 package router
 
 import (
-	v1 "github.com/clarechu/infrapulse/pkg/server/router/v1"
+	v1 "github.com/clarechu/infra-pulse/src/server/router/v1"
 	"github.com/emicklei/go-restful/v3"
 )
 

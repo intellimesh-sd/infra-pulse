@@ -3,7 +3,7 @@ package server
 import (
 	"context"
 	"crypto/tls"
-	"github.com/clarechu/infrapulse/pkg/server/router"
+	"github.com/clarechu/infra-pulse/src/server/router"
 	"k8s.io/klog/v2"
 	"net"
 	"net/http"

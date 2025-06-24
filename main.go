@@ -2,7 +2,7 @@ package main
 
 import (
 	goflags "flag"
-	"github.com/clarechu/infrapulse/cmd"
+	"github.com/clarechu/infra-pulse/cmd"
 	"github.com/spf13/pflag"
 	"k8s.io/klog/v2"
 	"os"

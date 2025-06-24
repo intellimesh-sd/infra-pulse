@@ -2,7 +2,7 @@ package server
 
 import (
 	"context"
-	"github.com/clarechu/infrapulse/pkg/server/router"
+	"github.com/clarechu/infra-pulse/src/server/router"
 )
 
 type CmdbConfig struct {

@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"github.com/clarechu/infrapulse/pkg/server"
-	"github.com/clarechu/infrapulse/pkg/utils/homedir"
+	"github.com/clarechu/infra-pulse/src/server"
+	"github.com/clarechu/infra-pulse/src/utils/homedir"
 	"github.com/spf13/cobra"
 	"k8s.io/klog/v2"
 	"os"
