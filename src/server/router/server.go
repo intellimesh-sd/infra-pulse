@@ -10,10 +10,11 @@ type Server struct {
 }
 
 // NewServer initializes and configures a kubelet.Server object to handle HTTP requests.
-func NewServer() Server {
+func NewServer(router v1.RouteInterface) Server {
 	server := Server{
 		RestfulCont: restful.NewContainer(),
 	}
+	server.RestfulCont.Add(v1.MetricsHandler())
 
 	server.RestfulCont.Add(DefaultHandlers())
 	return server

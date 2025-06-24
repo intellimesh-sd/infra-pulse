@@ -3,6 +3,7 @@ package server
 import (
 	"context"
 	"github.com/clarechu/infra-pulse/src/server/router"
+	routerv1 "github.com/clarechu/infra-pulse/src/server/router/v1"
 )
 
 type CmdbConfig struct {
@@ -14,10 +15,11 @@ type CmdbConfig struct {
 func NewCmdb(config *CmdbConfig) (Bootstrap, error) {
 
 	ctx, cancel := context.WithCancel(context.Background())
+	routeServer := routerv1.NewRouteServer()
 	return &CMDB{
 		port:      config.Port,
 		proxyPort: config.ProxyPort,
-		server:    router.NewServer(),
+		server:    router.NewServer(routeServer),
 		ctx:       ctx,
 		cancel:    cancel,
 	}, nil
